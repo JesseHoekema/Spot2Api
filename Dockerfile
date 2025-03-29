@@ -14,7 +14,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY spotify_mp3_server.py .
+COPY main.py .
 
 # Create downloads directory
 RUN mkdir -p downloads
@@ -23,4 +23,4 @@ RUN mkdir -p downloads
 EXPOSE 2354
 
 # Run the application
-CMD ["python", "spotify_mp3_server.py"]
+CMD ["python", "main.py"]
